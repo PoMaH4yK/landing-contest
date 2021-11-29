@@ -1,6 +1,7 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
+$paramsLocal = require __DIR__ . '/params-local.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
@@ -43,16 +44,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
-    'params' => $params,
+    'params' => array_merge($params, $paramsLocal),
 ];
 
 if (YII_ENV_DEV) {
