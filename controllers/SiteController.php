@@ -3,14 +3,11 @@
 namespace app\controllers;
 
 use app\behaviors\LogBehavior;
-use app\models\ActivitySearch;
 use app\utils\JsonRpcDataProvider;
 use Yii;
-use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
-use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
